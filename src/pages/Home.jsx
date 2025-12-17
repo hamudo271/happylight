@@ -1,0 +1,455 @@
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { useRef } from 'react'
+import { 
+  ArrowRight, Play, Star, Users, Calendar, Award, 
+  Building2, GraduationCap, Trophy, Mic2, PartyPopper,
+  Sparkles, ChevronRight, Zap, Heart, Target, 
+  Video, Landmark, HeartHandshake
+} from 'lucide-react'
+import './Home.css'
+
+const stats = [
+  { number: 'B2C', label: '개인 고객', icon: Heart },
+  { number: 'B2B', label: '기업 고객', icon: Building2 },
+  { number: 'B2G', label: '공공기관', icon: Landmark },
+  { number: '100%', label: '맞춤 서비스', icon: Star },
+]
+
+const services = [
+  {
+    icon: HeartHandshake,
+    title: '가족행사',
+    desc: '결혼식, 팔순·구순·백세잔치 등 가족의 소중한 순간을 감동으로',
+    path: '/services/family',
+    color: '#fb7185',
+    gradient: 'linear-gradient(135deg, #fb7185 0%, #f43f5e 100%)'
+  },
+  {
+    icon: GraduationCap,
+    title: '학교행사',
+    desc: '대학교 MT, 대학축제 등 젊음과 열정이 넘치는 행사 기획',
+    path: '/services/school',
+    color: '#a855f7',
+    gradient: 'linear-gradient(135deg, #a855f7 0%, #9333ea 100%)'
+  },
+  {
+    icon: Building2,
+    title: '기업행사',
+    desc: '워크숍, 체육대회, 송년회 등 기업의 중요한 순간을 완벽하게',
+    path: '/services/corporate',
+    color: '#f97316',
+    gradient: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)'
+  },
+  {
+    icon: Landmark,
+    title: '문화/공공행사',
+    desc: '지역 문화축제, 도시재생 문화사업, 대규모 전시회 및 캠프',
+    path: '/services/public',
+    color: '#22d3ee',
+    gradient: 'linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%)'
+  },
+  {
+    icon: Video,
+    title: '영상광고 제작',
+    desc: '기업·기관 홍보영상, 행사 기록 및 광고 제작',
+    path: '/services/video',
+    color: '#fbbf24',
+    gradient: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)'
+  },
+  {
+    icon: Mic2,
+    title: 'MC/강사 섭외',
+    desc: 'MC, 강사 진행부터 기획·연출까지 아우르는 종합 서비스',
+    path: '/booking',
+    color: '#34d399',
+    gradient: 'linear-gradient(135deg, #34d399 0%, #10b981 100%)'
+  },
+]
+
+const portfolioItems = [
+  {
+    title: '삼성전자 체육대회',
+    category: '기업행사',
+    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop',
+    size: 'large'
+  },
+  {
+    title: '현대자동차 팀빌딩',
+    category: '팀빌딩',
+    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop',
+    size: 'medium'
+  },
+  {
+    title: 'LG전자 창립기념일',
+    category: '기업행사',
+    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop',
+    size: 'medium'
+  },
+  {
+    title: '서울초 가을운동회',
+    category: '학교행사',
+    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop',
+    size: 'small'
+  },
+  {
+    title: '네이버 골든벨',
+    category: '골든벨',
+    image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop',
+    size: 'small'
+  },
+]
+
+const partners = [
+  '삼성전자', 'LG전자', '현대자동차', 'SK', 'CJ', '롯데', 
+  '네이버', '카카오', '쿠팡', '배달의민족', 'KT', 'POSCO'
+]
+
+const features = [
+  {
+    icon: Mic2,
+    title: 'MC & 강사진행',
+    desc: '현장 경험이 풍부한 전문 MC와 강사진'
+  },
+  {
+    icon: PartyPopper,
+    title: '행사 기획/연출',
+    desc: '콘셉트부터 연출까지 원스톱 서비스'
+  },
+  {
+    icon: Video,
+    title: '영상광고 제작',
+    desc: '감동을 담은 홍보영상 및 기록 제작'
+  }
+]
+
+function Home() {
+  const heroRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  })
+  
+  const heroY = useTransform(scrollYProgress, [0, 1], [0, 200])
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+
+  return (
+    <div className="home">
+      {/* Hero Section */}
+      <section className="hero" ref={heroRef}>
+        <div className="hero-bg">
+          <div className="hero-gradient"></div>
+          <div className="hero-mesh"></div>
+          <div className="hero-grid"></div>
+          <motion.div 
+            className="hero-orb hero-orb-1"
+            animate={{ 
+              y: [0, -30, 0],
+              x: [0, 20, 0],
+              scale: [1, 1.1, 1]
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div 
+            className="hero-orb hero-orb-2"
+            animate={{ 
+              y: [0, 40, 0],
+              x: [0, -30, 0],
+              scale: [1, 0.9, 1]
+            }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div 
+            className="hero-orb hero-orb-3"
+            animate={{ 
+              y: [0, -20, 0],
+              x: [0, -20, 0]
+            }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </div>
+        
+        <motion.div 
+          className="container hero-content"
+          style={{ y: heroY, opacity: heroOpacity }}
+        >
+          <motion.div
+            className="hero-badge"
+            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Sparkles size={14} />
+            <span>종합 행사대행 기획사</span>
+          </motion.div>
+          
+          <motion.h1
+            className="hero-title"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            현장에 강한 기획력
+            <br />
+            <span className="gradient-text">따뜻한 감동</span>의 연출
+          </motion.h1>
+          
+          <motion.p
+            className="hero-desc"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            해피라이트 엔터테인먼트는 다양한 현장에서 축적된 경험과 전문성을 바탕으로
+            <br />
+            MC, 강사 진행, 기획·연출까지 아우르는 종합 행사대행 기획사입니다.
+          </motion.p>
+          
+          <motion.div
+            className="hero-buttons"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <Link to="/contact" className="btn btn-primary hero-btn-primary">
+              무료 상담 신청
+              <ArrowRight size={18} />
+            </Link>
+            <Link to="/portfolio" className="btn btn-secondary hero-btn-secondary">
+              <Play size={18} />
+              포트폴리오 보기
+            </Link>
+          </motion.div>
+          
+          <motion.div
+            className="hero-stats"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            {stats.map((stat, index) => (
+              <motion.div 
+                key={index} 
+                className="hero-stat"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+              >
+                <stat.icon className="hero-stat-icon" size={20} />
+                <span className="hero-stat-number">{stat.number}</span>
+                <span className="hero-stat-label">{stat.label}</span>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
+        
+      </section>
+
+      {/* About Section - 회사 소개 */}
+      <section className="section about-section">
+        <div className="container">
+          <motion.div
+            className="about-content"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="about-text">
+              <h2 className="about-title">
+                ✨ 행사의 시작부터 끝까지,<br />
+                <span className="gradient-text">해피라이트</span>가 함께합니다
+              </h2>
+              <p className="about-desc">
+                우리는 단순한 행사대행사가 아닙니다.<br />
+                작게는 가족의 소중한 순간부터,<br />
+                크게는 기업·학교·지역축제, 도시재생 문화사업,<br />
+                대규모 캠프와 전시회까지—<br />
+                <strong>어떤 자리든 따뜻하고 즐겁게 채워드립니다.</strong>
+              </p>
+            </div>
+          </motion.div>
+          
+          <div className="features-grid">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                className="feature-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="feature-icon">
+                  <feature.icon size={24} />
+                </div>
+                <h3>{feature.title}</h3>
+                <p>{feature.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+          
+          <motion.p
+            className="about-tagline"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            👉 웃음이 넘치는 현장, 감동이 남는 추억<br />
+            그 중심에 <strong>해피라이트 엔터테인먼트</strong>가 있습니다.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="section services-section">
+        <div className="container">
+          <motion.div
+            className="section-header"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="section-badge">
+              <Sparkles size={12} />
+              주요 서비스 영역
+            </span>
+            <h2 className="section-title">
+              모든 <span className="gradient-text">순간</span>을 특별하게
+            </h2>
+            <p className="section-subtitle">
+              B2C(개인), B2B(기업), B2G(공공기관) 전 영역에서 맞춤형 서비스를 제공합니다
+            </p>
+          </motion.div>
+          
+          <div className="services-grid">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Link to={service.path} className="service-card">
+                  <div className="service-card-bg" style={{ background: service.gradient }}></div>
+                  <div 
+                    className="service-icon"
+                    style={{ '--service-color': service.color }}
+                  >
+                    <service.icon size={28} />
+                  </div>
+                  <h3 className="service-title">{service.title}</h3>
+                  <p className="service-desc">{service.desc}</p>
+                  <span className="service-link">
+                    자세히 보기 <ChevronRight size={16} />
+                  </span>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Preview */}
+      <section className="section portfolio-section">
+        <div className="portfolio-bg"></div>
+        <div className="container">
+          <motion.div
+            className="section-header"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="section-badge">
+              <Sparkles size={12} />
+              PORTFOLIO
+            </span>
+            <h2 className="section-title">
+              최근 <span className="gradient-text">진행 행사</span>
+            </h2>
+            <p className="section-subtitle">
+              다양한 기업과 함께한 성공적인 행사 사례를 확인하세요
+            </p>
+          </motion.div>
+          
+          <div className="portfolio-bento">
+            {portfolioItems.map((item, index) => (
+              <motion.div
+                key={index}
+                className={`portfolio-item portfolio-${item.size}`}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="portfolio-image">
+                  <img src={item.image} alt={item.title} />
+                  <div className="portfolio-overlay">
+                    <span className="portfolio-category">{item.category}</span>
+                    <h4 className="portfolio-title">{item.title}</h4>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
+          <motion.div
+            className="portfolio-cta"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Link to="/portfolio" className="btn btn-primary">
+              더 많은 사례 보기
+              <ArrowRight size={18} />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Partners */}
+      <section className="section partners-section">
+        <div className="container">
+          <motion.div
+            className="section-header"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="section-badge">
+              <Sparkles size={12} />
+              PARTNERS
+            </span>
+            <h2 className="section-title">
+              함께하는 <span className="gradient-text">파트너사</span>
+            </h2>
+          </motion.div>
+          
+          <motion.div
+            className="partners-marquee"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="partners-track">
+              {[...partners, ...partners].map((partner, index) => (
+                <div key={index} className="partner-item">
+                  <span>{partner}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+export default Home

@@ -1,0 +1,25 @@
+{
+  "name": "happylight-server",
+  "version": "1.0.0",
+  "description": "해피라이트 백엔드 서버 - 문의 폼 이메일 전송 및 보안",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["event", "security", "ddos", "email", "happylight"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.2.1",
+    "express-validator": "^7.3.1",
+    "geoip-lite": "^1.4.10",
+    "helmet": "^8.1.0",
+    "nodemailer": "^7.0.11"
+  }
+}
+
