@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://hamudo271.github.io/happylight/",
+  "homepage": "https://hamudo271.github.io/happy/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
