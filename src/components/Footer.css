@@ -27,8 +27,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: 3rem;
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.08) 0%, rgba(168, 85, 247, 0.05) 100%);
+  padding: 4.5rem 3rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/happylight/image 2.png') no-repeat center/cover;
   border: 1px solid rgba(249, 115, 22, 0.15);
   border-radius: var(--radius-2xl);
 }
