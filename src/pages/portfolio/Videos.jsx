@@ -1,75 +1,57 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Play, X, Calendar, Eye } from 'lucide-react'
+import { Play, X, Calendar, Eye, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import '../Portfolio.css'
 import './Videos.css'
 
-const videos = [
-  {
-    id: 1,
-    title: '삼성전자 2024 체육대회 하이라이트',
-    category: '기업행사',
-    date: '2024.10',
-    views: 2345,
-    thumbnail: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=340&fit=crop',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
-  },
-  {
-    id: 2,
-    title: '현대자동차 팀빌딩 프로그램',
-    category: '팀빌딩',
-    date: '2024.09',
-    views: 1892,
-    thumbnail: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=340&fit=crop',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
-  },
-  {
-    id: 3,
-    title: 'LG전자 창립 75주년 기념행사',
-    category: '공식의전',
-    date: '2024.08',
-    views: 3456,
-    thumbnail: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=340&fit=crop',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
-  },
-  {
-    id: 4,
-    title: '네이버 도전! 골든벨',
-    category: '골든벨',
-    date: '2024.07',
-    views: 4123,
-    thumbnail: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=340&fit=crop',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
-  },
-  {
-    id: 5,
-    title: '카카오 가족 운동회',
-    category: '기업행사',
-    date: '2024.06',
-    views: 2789,
-    thumbnail: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=340&fit=crop',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
-  },
-  {
-    id: 6,
-    title: '서울초등학교 가을운동회',
-    category: '학교행사',
-    date: '2024.10',
-    views: 1567,
-    thumbnail: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=340&fit=crop',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
-  },
-]
+import { videos } from '../../data/mediaData'
 
 const categories = ['전체', '기업행사', '팀빌딩', '공식의전', '골든벨', '학교행사']
+const ITEMS_PER_PAGE = 12
 
 function Videos() {
   const [activeCategory, setActiveCategory] = useState('전체')
   const [selectedVideo, setSelectedVideo] = useState(null)
+  const [currentPage, setCurrentPage] = useState(1)
+
+  // Reset to page 1 when category changes
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [activeCategory])
 
   const filteredVideos = activeCategory === '전체' 
     ? videos 
     : videos.filter(v => v.category === activeCategory)
+
+  const totalPages = Math.ceil(filteredVideos.length / ITEMS_PER_PAGE)
+  
+  const currentVideos = filteredVideos.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  )
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  // Generate page numbers
+  const getPageNumbers = () => {
+    const pages = []
+    const maxVisiblePages = 5
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2))
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1)
+
+    if (endPage - startPage + 1 < maxVisiblePages) {
+      startPage = Math.max(1, endPage - maxVisiblePages + 1)
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+      pages.push(i)
+    }
+    return pages
+  }
 
   return (
     <div className="videos-page">
@@ -97,22 +79,9 @@ function Videos() {
       {/* Videos Grid */}
       <section className="section">
         <div className="container">
-          {/* Category Filter */}
-          <div className="category-filter">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                className={`filter-btn ${activeCategory === cat ? 'active' : ''}`}
-                onClick={() => setActiveCategory(cat)}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-
           {/* Videos */}
           <div className="videos-grid">
-            {filteredVideos.map((video, index) => (
+            {currentVideos.map((video, index) => (
               <motion.div
                 key={video.id}
                 className="video-card"
@@ -137,6 +106,64 @@ function Videos() {
                   </div>
                 </div>
               </motion.div>
+            ))}
+          </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="pagination">
+              <button 
+                className="page-btn nav"
+                onClick={() => handlePageChange(1)}
+                disabled={currentPage === 1}
+              >
+                <ChevronsLeft size={20} />
+              </button>
+              <button 
+                className="page-btn nav"
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                <ChevronLeft size={20} />
+              </button>
+              
+              {getPageNumbers().map(page => (
+                <button
+                  key={page}
+                  className={`page-btn ${currentPage === page ? 'active' : ''}`}
+                  onClick={() => handlePageChange(page)}
+                >
+                  {page}
+                </button>
+              ))}
+
+              <button 
+                className="page-btn nav"
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+              >
+                <ChevronRight size={20} />
+              </button>
+              <button 
+                className="page-btn nav"
+                onClick={() => handlePageChange(totalPages)}
+                disabled={currentPage === totalPages}
+              >
+                <ChevronsRight size={20} />
+              </button>
+            </div>
+          )}
+
+          {/* Category Filter */}
+          <div className="category-filter" style={{ marginTop: '3rem', marginBottom: '2rem' }}>
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={`filter-btn ${activeCategory === cat ? 'active' : ''}`}
+                onClick={() => setActiveCategory(cat)}
+              >
+                {cat}
+              </button>
             ))}
           </div>
         </div>
@@ -165,13 +192,22 @@ function Videos() {
               <X size={24} />
             </button>
             <div className="video-embed">
-              <iframe
-                src={selectedVideo.videoUrl}
-                title={selectedVideo.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              {selectedVideo.videoUrl.endsWith('.mp4') ? (
+                <video 
+                  src={encodeURI(selectedVideo.videoUrl)} 
+                  controls 
+                  autoPlay 
+                  className="w-full h-full"
+                />
+              ) : (
+                <iframe
+                  src={selectedVideo.videoUrl}
+                  title={selectedVideo.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              )}
             </div>
             <div className="video-modal-info">
               <h3>{selectedVideo.title}</h3>

@@ -11,7 +11,7 @@ const categories = [
     path: '/portfolio/videos',
     count: '50+',
     color: '#ff6b35',
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop'
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104124578_29.jpg'
   },
   {
     icon: Camera,
@@ -20,7 +20,7 @@ const categories = [
     path: '/portfolio/photos',
     count: '500+',
     color: '#7c3aed',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop'
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_17.jpg'
   },
 ]
 
@@ -29,37 +29,37 @@ const recentWorks = [
     title: '삼성전자 2024 체육대회',
     category: '기업행사',
     date: '2024.10',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop'
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104124578_12.jpg'
   },
   {
     title: '현대자동차 팀빌딩 프로그램',
     category: '팀빌딩',
     date: '2024.09',
-    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop'
+    image: '/happylight/해피라이트/레크레이션/1555984699091.jpg'
   },
   {
     title: 'LG전자 창립 75주년 행사',
     category: '공식의전',
     date: '2024.08',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop'
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_14.jpg'
   },
   {
     title: '서울초등학교 가을운동회',
     category: '학교행사',
     date: '2024.10',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop'
+    image: '/happylight/해피라이트/레크레이션/1478390046277.jpg'
   },
   {
     title: 'SK텔레콤 송년회',
     category: '기업행사',
     date: '2024.11',
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop'
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104124578_06.jpg'
   },
   {
     title: '네이버 도전! 골든벨',
     category: '골든벨',
     date: '2024.07',
-    image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop'
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_28.jpg'
   },
 ]
 

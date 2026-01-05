@@ -71,31 +71,31 @@ const portfolioItems = [
   {
     title: '삼성전자 체육대회',
     category: '기업행사',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop',
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104124578_12.jpg',
     size: 'large'
   },
   {
     title: '현대자동차 팀빌딩',
     category: '팀빌딩',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop',
+    image: '/happylight/해피라이트/레크레이션/1555984699091.jpg',
     size: 'medium'
   },
   {
     title: 'LG전자 창립기념일',
     category: '기업행사',
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop',
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_14.jpg',
     size: 'medium'
   },
   {
     title: '서울초 가을운동회',
     category: '학교행사',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop',
+    image: '/happylight/해피라이트/레크레이션/1478390046277.jpg',
     size: 'small'
   },
   {
     title: '네이버 골든벨',
     category: '골든벨',
-    image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop',
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_28.jpg',
     size: 'small'
   },
 ]
@@ -138,35 +138,12 @@ function Home() {
       {/* Hero Section */}
       <section className="hero" ref={heroRef}>
         <div className="hero-bg">
-          <div className="hero-gradient"></div>
-          <div className="hero-mesh"></div>
-          <div className="hero-grid"></div>
-          <motion.div 
-            className="hero-orb hero-orb-1"
-            animate={{ 
-              y: [0, -30, 0],
-              x: [0, 20, 0],
-              scale: [1, 1.1, 1]
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          <img 
+            src={`${import.meta.env.BASE_URL}images/hero-bg-generated.png`}
+            alt="Hero Background" 
+            className="hero-bg-image"
           />
-          <motion.div 
-            className="hero-orb hero-orb-2"
-            animate={{ 
-              y: [0, 40, 0],
-              x: [0, -30, 0],
-              scale: [1, 0.9, 1]
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div 
-            className="hero-orb hero-orb-3"
-            animate={{ 
-              y: [0, -20, 0],
-              x: [0, -20, 0]
-            }}
-            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          />
+          <div className="hero-overlay"></div>
         </div>
         
         <motion.div 
@@ -257,7 +234,7 @@ function Home() {
           >
             <div className="about-text">
               <h2 className="about-title">
-                ✨ 행사의 시작부터 끝까지,<br />
+                행사의 시작부터 끝까지,<br />
                 <span className="gradient-text">해피라이트</span>가 함께합니다
               </h2>
               <p className="about-desc">
@@ -319,7 +296,7 @@ function Home() {
             <h2 className="section-title">
               모든 <span className="gradient-text">순간</span>을 특별하게
             </h2>
-            <p className="section-subtitle">
+            <p className="section-subtitle" style={{ wordBreak: 'keep-all' }}>
               B2C(개인), B2B(기업), B2G(공공기관) 전 영역에서 맞춤형 서비스를 제공합니다
             </p>
           </motion.div>

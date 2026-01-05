@@ -200,7 +200,7 @@ function Header() {
       <div className="header-container">
         <Link to="/" className="logo">
           <img 
-            src="/images/happylight.png" 
+            src={`${import.meta.env.BASE_URL}images/happylight.png`}
             alt="해피라이트" 
             className="logo-image"
           />
@@ -217,7 +217,9 @@ function Header() {
               <Link
                 to={item.path}
                 className={`nav-link ${
-                  location.pathname.startsWith(item.path) ? "active" : ""
+                  (location.pathname === item.path || (location.pathname.startsWith(item.path + '/') && item.path !== '/')) 
+                    ? "active" 
+                    : ""
                 }`}
               >
                 {item.name}
@@ -308,7 +310,7 @@ function Header() {
               <div className="mobile-menu-header">
                 <Link to="/" className="logo">
                   <img 
-                    src="/images/happylight.png" 
+                    src={`${import.meta.env.BASE_URL}images/happylight.png`}
                     alt="해피라이트" 
                     className="logo-image"
                   />

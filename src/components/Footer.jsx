@@ -103,7 +103,7 @@ function Footer() {
             <div className="footer-section footer-brand">
               <Link to="/" className="footer-logo">
                 <img 
-                  src="/images/happylight.png" 
+                  src="/happylight/images/happylight.png" 
                   alt="해피라이트" 
                   className="footer-logo-image"
                 />

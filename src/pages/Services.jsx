@@ -14,7 +14,7 @@ const services = [
     desc: '기공식, 준공식, 창립기념일 등 공식 의전 행사의 품격을 높여드립니다.',
     features: ['기공식/준공식', '창립기념일', '취임식/이취임식', '기념행사'],
     color: '#ff6b35',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop'
+    image: `${import.meta.env.BASE_URL}해피라이트/결혼식관련/KakaoTalk_20250905_170758737.jpg`
   },
   {
     id: 'corporate',
@@ -23,7 +23,7 @@ const services = [
     desc: '기업의 중요한 순간을 성공적으로 이끄는 전문 기업행사 서비스',
     features: ['송년회/신년회', '시무식/종무식', '워크샵', '세미나'],
     color: '#7c3aed',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop'
+    image: `${import.meta.env.BASE_URL}해피라이트/0__250930/1749938749137.jpg`
   },
   {
     id: 'teambuilding',
@@ -32,7 +32,7 @@ const services = [
     desc: '조직의 화합과 소통을 이끄는 맞춤형 팀빌딩 프로그램',
     features: ['팀 화합 프로그램', '리더십 강화', '커뮤니케이션', '문제해결 워크샵'],
     color: '#06d6a0',
-    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop'
+    image: `${import.meta.env.BASE_URL}해피라이트/레크레이션/1535137644533.jpg`
   },
   {
     id: 'sports',
@@ -41,7 +41,7 @@ const services = [
     desc: '임직원 화합과 건강한 조직문화를 위한 체육대회 전문 기획',
     features: ['기업 체육대회', '가족운동회', '스포츠 페스티벌', '걷기대회'],
     color: '#00d4ff',
-    image: 'https://images.unsplash.com/photo-1461896836934- voices-of-fashion-t1?w=600&h=400&fit=crop'
+    image: `${import.meta.env.BASE_URL}해피라이트/레크레이션/1505922847609.jpg`
   },
   {
     id: 'school',
@@ -50,7 +50,7 @@ const services = [
     desc: '초등학교 운동회부터 대학 축제까지 학교 행사 전문',
     features: ['초등학교 운동회', '중고등학교 축제', '대학교 행사', '졸업식'],
     color: '#f72585',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop'
+    image: `${import.meta.env.BASE_URL}해피라이트/레크레이션/1478390046277.jpg`
   },
   {
     id: 'exhibition',
@@ -59,7 +59,7 @@ const services = [
     desc: '전시회, 박람회, 컨벤션 등 대규모 행사 기획 및 운영',
     features: ['전시회 기획', '박람회 운영', '컨벤션 진행', '부스 운영'],
     color: '#ffd700',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop'
+    image: `${import.meta.env.BASE_URL}해피라이트/0__250930/1749938629701.jpg`
   },
   {
     id: 'goldenbell',
@@ -68,7 +68,7 @@ const services = [
     desc: '참여와 재미를 극대화하는 도전! 골든벨 퀴즈쇼',
     features: ['기업 골든벨', '학교 골든벨', '단체 퀴즈쇼', '맞춤형 문제 제작'],
     color: '#ff6b35',
-    image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop'
+    image: `${import.meta.env.BASE_URL}해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_05.jpg`
   },
   {
     id: 'recreation',
@@ -77,7 +77,7 @@ const services = [
     desc: '참가자 모두가 즐거운 전문 레크레이션 프로그램',
     features: ['학생 레크레이션', '성인 레크레이션', '가족 레크레이션', 'MC 진행'],
     color: '#7c3aed',
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop'
+    image: `${import.meta.env.BASE_URL}해피라이트/레크레이션/1477559387430.jpg`
   },
 ]
 
