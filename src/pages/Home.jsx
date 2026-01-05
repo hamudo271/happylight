@@ -335,6 +335,25 @@ function Home() {
         <div className="portfolio-bg"></div>
         <div className="container">
           <motion.div
+            className="portfolio-banner"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            style={{ marginBottom: '3rem', textAlign: 'center' }}
+          >
+            <img 
+              src={`${import.meta.env.BASE_URL}image 2.png`} 
+              alt="Special Event" 
+              style={{ 
+                maxWidth: '100%', 
+                borderRadius: 'var(--radius-2xl)',
+                boxShadow: 'var(--shadow-lg)',
+                border: '1px solid rgba(255, 255, 255, 0.1)'
+              }} 
+            />
+          </motion.div>
+          <motion.div
             className="section-header"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
