@@ -327,20 +327,14 @@ function Home() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Portfolio Preview */}
-      <section className="section portfolio-section">
-        <div className="portfolio-bg"></div>
-        <div className="container">
+          
           <motion.div
-            className="portfolio-banner"
+            className="services-banner"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            style={{ marginBottom: '3rem', textAlign: 'center' }}
+            style={{ marginTop: '5rem', textAlign: 'center' }}
           >
             <img 
               src={`${import.meta.env.BASE_URL}image 2.png`} 
@@ -353,6 +347,14 @@ function Home() {
               }} 
             />
           </motion.div>
+        </div>
+      </section>
+
+      {/* Portfolio Preview */}
+      <section className="section portfolio-section">
+        <div className="portfolio-bg"></div>
+        <div className="container">
+
           <motion.div
             className="section-header"
             initial={{ opacity: 0, y: 30 }}
