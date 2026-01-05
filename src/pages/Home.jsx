@@ -334,7 +334,7 @@ function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            style={{ marginTop: '5rem', textAlign: 'center' }}
+            style={{ marginTop: '5rem', display: 'flex', justifyContent: 'center', width: '100%' }}
           >
             <img 
               src={`${import.meta.env.BASE_URL}image 2.png`} 
