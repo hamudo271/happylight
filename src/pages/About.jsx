@@ -21,7 +21,7 @@ const aboutLinks = [
   {
     icon: History,
     title: '주요실적',
-    desc: '15년간 쌓아온 성공적인 행사 기록들',
+    desc: '20년간 쌓아온 성공적인 행사 기록들',
     path: '/about/history',
     color: '#06d6a0'
   },
@@ -52,7 +52,7 @@ function About() {
               회사<span className="gradient-text">소개</span>
             </h1>
             <p className="page-desc">
-              15년의 경험, 2,500건의 성공적인 행사<br />
+              20년의 경험, 2,500건의 성공적인 행사<br />
               해피라이트가 걸어온 길을 소개합니다
             </p>
           </motion.div>
@@ -117,7 +117,7 @@ function About() {
               </p>
               <div className="overview-stats">
                 <div className="overview-stat">
-                  <span className="overview-stat-number">15+</span>
+                  <span className="overview-stat-number">20+</span>
                   <span className="overview-stat-label">년 경력</span>
                 </div>
                 <div className="overview-stat">

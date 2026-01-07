@@ -22,7 +22,7 @@ const categoriesData = {
     subtitle: '완벽한 진행, 잊지 못할 행사',
     desc: '전문 MC와 레크레이션 강사가 행사를 완벽하게 진행합니다. 기업행사, 체육대회, 학교행사 등 모든 행사에서 참가자들의 만족도를 높여드립니다.',
     items: [
-      { name: '이현주', position: '전문MC 15년', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop', rating: 5.0 },
+      { name: '이현주', position: '전문MC 20년', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop', rating: 5.0 },
       { name: '김재민', position: '레크레이션 전문', image: 'https://images.unsplash.com/photo-1463453091185-61582044d556?w=300&h=300&fit=crop', rating: 4.9 },
       { name: '박소영', position: '기업행사 MC', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop', rating: 4.8 },
       { name: '최진호', position: '체육대회 전문', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop', rating: 4.9 },
