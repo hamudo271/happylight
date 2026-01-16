@@ -4,6 +4,24 @@
   overflow: hidden;
 }
 
+.hero-cta-wrapper {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.consulting-btn {
+  padding: 1.25rem 3rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
+}
+
+.consulting-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.5);
+}
+
 .contact-hero-shapes {
   position: absolute;
   inset: 0;
@@ -20,7 +38,7 @@
 .shape-1 {
   width: 500px;
   height: 500px;
-  background: rgba(249, 115, 22, 0.2);
+  background: rgba(236, 72, 153, 0.2);
   top: -20%;
   right: -10%;
 }
@@ -28,7 +46,7 @@
 .shape-2 {
   width: 400px;
   height: 400px;
-  background: rgba(168, 85, 247, 0.15);
+  background: rgba(14, 165, 233, 0.15);
   bottom: -10%;
   left: -10%;
   animation-delay: -5s;
@@ -37,7 +55,7 @@
 .shape-3 {
   width: 300px;
   height: 300px;
-  background: rgba(34, 211, 238, 0.1);
+  background: rgba(132, 204, 22, 0.1);
   top: 40%;
   left: 30%;
   animation-delay: -10s;
@@ -71,7 +89,7 @@
 
 .contact-info-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(249, 115, 22, 0.3);
+  border-color: rgba(236, 72, 153, 0.3);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
@@ -86,22 +104,22 @@
 }
 
 .phone-icon {
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(249, 115, 22, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(236, 72, 153, 0.1) 100%);
   color: var(--color-accent-primary);
 }
 
 .email-icon {
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(168, 85, 247, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.2) 0%, rgba(14, 165, 233, 0.1) 100%);
   color: var(--color-accent-secondary);
 }
 
 .location-icon {
-  background: linear-gradient(135deg, rgba(34, 211, 238, 0.2) 0%, rgba(34, 211, 238, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(132, 204, 22, 0.2) 0%, rgba(132, 204, 22, 0.1) 100%);
   color: var(--color-accent-tertiary);
 }
 
 .time-icon {
-  background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(251, 191, 36, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(14, 165, 233, 0.1) 100%);
   color: var(--color-accent-gold);
 }
 
@@ -208,8 +226,8 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-accent-primary);
-  background: rgba(249, 115, 22, 0.05);
-  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+  background: rgba(236, 72, 153, 0.05);
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
 }
 
 .form-group select {
@@ -329,7 +347,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.08) 0%, rgba(168, 85, 247, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.08) 0%, rgba(14, 165, 233, 0.05) 100%);
   text-align: center;
 }
 
@@ -386,7 +404,7 @@
 
 .quick-phone:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 60px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 0 60px rgba(236, 72, 153, 0.4);
 }
 
 /* Social Links */
@@ -459,7 +477,7 @@
 }
 
 .faq-item:hover {
-  border-color: rgba(249, 115, 22, 0.2);
+  border-color: rgba(236, 72, 153, 0.2);
 }
 
 .faq-item h4 {
@@ -489,7 +507,7 @@
 
 [data-theme="light"] .contact-info-card:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-  border-color: rgba(249, 115, 22, 0.3);
+  border-color: rgba(236, 72, 153, 0.3);
 }
 
 /* 폼 래퍼 */
@@ -516,7 +534,7 @@
 [data-theme="light"] .form-group input:focus,
 [data-theme="light"] .form-group select:focus,
 [data-theme="light"] .form-group textarea:focus {
-  background: rgba(249, 115, 22, 0.03);
+  background: rgba(236, 72, 153, 0.03);
   border-color: var(--color-accent-primary);
 }
 
@@ -536,7 +554,7 @@
 }
 
 [data-theme="light"] .map-placeholder {
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.06) 0%, rgba(168, 85, 247, 0.04) 100%);
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.06) 0%, rgba(14, 165, 233, 0.04) 100%);
 }
 
 /* 빠른 연락 */
@@ -574,7 +592,7 @@
 }
 
 [data-theme="light"] .faq-item:hover {
-  border-color: rgba(249, 115, 22, 0.25);
+  border-color: rgba(236, 72, 153, 0.25);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -631,6 +649,68 @@
   .quick-contact,
   .social-links {
     min-width: 100%;
+  }
+}
+
+/* Message Marquee Section */
+.message-marquee-section {
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, var(--color-bg-primary), var(--color-bg-secondary));
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  width: 200vw;
+  gap: 0;
+  animation: scroll-left 30s linear infinite;
+}
+
+.marquee-item {
+  width: 100vw;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marquee-text {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-text-secondary);
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.marquee-text .highlight {
+  background: linear-gradient(135deg, #ec4899 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0.5rem;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
+@media (max-width: 768px) {
+  .message-marquee-section {
+    padding: 3rem 0;
+  }
+  
+  .marquee-text {
+    font-size: 1.5rem;
   }
 }
 

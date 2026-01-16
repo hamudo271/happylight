@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap");
 
 :root {
-  /* 2025 Trend Colors - Warm Luxury Dark Theme */
+  /* New Trend Colors - Pink/Blue/Green Theme */
   --color-bg-primary: #0c0a09;
   --color-bg-secondary: #1c1917;
   --color-bg-tertiary: #292524;
@@ -12,26 +12,28 @@
   --color-text-secondary: #a8a29e;
   --color-text-muted: #78716c;
 
-  /* Warm accent palette */
-  --color-accent-primary: #f97316;
-  --color-accent-secondary: #a855f7;
-  --color-accent-tertiary: #22d3ee;
+  /* Fresh Palette: Pink, Sky Blue, Light Green */
+  --color-accent-primary: #ec4899;   /* Pink */
+  --color-accent-secondary: #0ea5e9; /* Sky Blue */
+  --color-accent-tertiary: #84cc16;  /* Light Green */
   --color-accent-gold: #fbbf24;
-  --color-accent-rose: #fb7185;
+  --color-accent-rose: #f43f5e;
 
-  /* Gradients - 2025 mesh gradient style */
+  /* Gradients */
   --gradient-primary: linear-gradient(
     135deg,
-    #f97316 0%,
-    #ec4899 50%,
-    #a855f7 100%
+    #ec4899 0%,
+    #0ea5e9 100%
   );
-  --gradient-secondary: linear-gradient(135deg, #a855f7 0%, #22d3ee 100%);
+  --gradient-secondary: linear-gradient(
+    135deg,
+    #0ea5e9 0%,
+    #84cc16 100%
+  );
   --gradient-warm: linear-gradient(
     135deg,
-    #fbbf24 0%,
-    #f97316 50%,
-    #ef4444 100%
+    #ec4899 0%,
+    #f43f5e 100%
   );
   --gradient-card: linear-gradient(
     145deg,
@@ -40,18 +42,18 @@
   );
   --gradient-glow: radial-gradient(
     ellipse at center,
-    rgba(249, 115, 22, 0.12) 0%,
+    rgba(236, 72, 153, 0.15) 0%,
     transparent 70%
   );
   --gradient-mesh: radial-gradient(
       at 40% 20%,
-      rgba(249, 115, 22, 0.15) 0px,
+      rgba(236, 72, 153, 0.15) 0px,
       transparent 50%
     ),
-    radial-gradient(at 80% 0%, rgba(168, 85, 247, 0.1) 0px, transparent 50%),
-    radial-gradient(at 0% 50%, rgba(34, 211, 238, 0.08) 0px, transparent 50%),
-    radial-gradient(at 80% 50%, rgba(251, 191, 36, 0.08) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(251, 113, 133, 0.1) 0px, transparent 50%);
+    radial-gradient(at 80% 0%, rgba(14, 165, 233, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(132, 204, 22, 0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(14, 165, 233, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(236, 72, 153, 0.1) 0px, transparent 50%);
 
   /* Spacing */
   --spacing-xs: 0.25rem;
@@ -71,12 +73,12 @@
   --radius-2xl: 48px;
   --radius-full: 9999px;
 
-  /* Shadows - Softer, more diffused */
+  /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.45);
-  --shadow-glow: 0 0 60px rgba(249, 115, 22, 0.25);
-  --shadow-glow-purple: 0 0 60px rgba(168, 85, 247, 0.25);
+  --shadow-glow: 0 0 60px rgba(236, 72, 153, 0.25);
+  --shadow-glow-purple: 0 0 60px rgba(14, 165, 233, 0.25);
 
   /* Transitions - Smooth, buttery */
   --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -113,13 +115,13 @@
   );
   --gradient-mesh: radial-gradient(
       at 40% 20%,
-      rgba(249, 115, 22, 0.08) 0px,
+      rgba(236, 72, 153, 0.08) 0px,
       transparent 50%
     ),
-    radial-gradient(at 80% 0%, rgba(168, 85, 247, 0.05) 0px, transparent 50%),
-    radial-gradient(at 0% 50%, rgba(34, 211, 238, 0.05) 0px, transparent 50%),
-    radial-gradient(at 80% 50%, rgba(251, 191, 36, 0.05) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(251, 113, 133, 0.05) 0px, transparent 50%);
+    radial-gradient(at 80% 0%, rgba(14, 165, 233, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(132, 204, 22, 0.05) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(14, 165, 233, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(236, 72, 153, 0.05) 0px, transparent 50%);
 
   /* Shadows for light mode */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -146,6 +148,8 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  word-break: keep-all;
+  word-wrap: break-word;
 }
 
 /* Background mesh effect */
@@ -417,10 +421,10 @@ ol {
 @keyframes glow {
   0%,
   100% {
-    box-shadow: 0 0 30px rgba(249, 115, 22, 0.3);
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.3);
   }
   50% {
-    box-shadow: 0 0 60px rgba(249, 115, 22, 0.5);
+    box-shadow: 0 0 60px rgba(236, 72, 153, 0.5);
   }
 }
 

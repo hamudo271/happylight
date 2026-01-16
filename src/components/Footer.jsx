@@ -83,9 +83,9 @@ function Footer() {
               <p>전문 컨설턴트가 무료로 상담해드립니다</p>
             </div>
             <div className="cta-actions">
-              <a href="tel:010-3433-1282" className="cta-phone">
+              <a href="tel:010-5728-8848" className="cta-phone">
                 <Phone size={20} />
-                <span>010-3433-1282</span>
+                <span>010-5728-8848</span>
               </a>
               <Link to="/contact" className="cta-link">
                 온라인 문의
@@ -103,7 +103,7 @@ function Footer() {
             <div className="footer-section footer-brand">
               <Link to="/" className="footer-logo">
                 <img 
-                  src="/happylight/images/happylight.png" 
+                  src="/images/happylight.png" 
                   alt="해피라이트" 
                   className="footer-logo-image"
                 />
@@ -120,7 +120,7 @@ function Footer() {
                 <a href="#" className="social-link" aria-label="Youtube">
                   <Youtube size={18} />
                 </a>
-                <a href="#" className="social-link" aria-label="KakaoTalk">
+                <a href="https://open.kakao.com/o/svQrVCw" className="social-link" aria-label="KakaoTalk" target="_blank" rel="noopener noreferrer">
                   <MessageCircle size={18} />
                 </a>
               </div>
@@ -154,15 +154,15 @@ function Footer() {
               <ul className="footer-contact">
                 <li>
                   <Phone size={16} />
-                  <a href="tel:010-3433-1282">010-3433-1282</a>
+                  <a href="tel:010-5728-8848">010-5728-8848</a>
                 </li>
                 <li>
                   <Mail size={16} />
-                  <a href="mailto:info@happylight.kr">info@happylight.kr</a>
+                  <a href="mailto:aura8848@gmail.com">aura8848@gmail.com</a>
                 </li>
                 <li>
                   <MapPin size={16} />
-                  <span>광주광역시 서구 상무연하로 72, 502호</span>
+                  <span>광주 서구 운천로 247 스타타워 4층<br />관광기업지원센터</span>
                 </li>
               </ul>
             </div>

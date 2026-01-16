@@ -76,9 +76,7 @@ const navigation = [
       { name: "팀빌딩 프로그램", path: "/services/teambuilding" },
       { name: "체육대회", path: "/services/sports" },
       { name: "학교행사", path: "/services/school" },
-      { name: "전시/컨벤션", path: "/services/exhibition" },
-      { name: "골든벨 행사", path: "/services/goldenbell" },
-      { name: "레크레이션", path: "/services/recreation" },
+      { name: "축제/전시", path: "/services/exhibition" },
     ],
   },
   {
@@ -90,15 +88,15 @@ const navigation = [
     ],
   },
   {
-    name: "섭외 및 대여",
+    name: "프로덕션지원",
     path: "/booking",
     submenu: [
-      { name: "개그맨 섭외", path: "/booking/comedian" },
-      { name: "MC/레크강사", path: "/booking/mc" },
-      { name: "가수 섭외", path: "/booking/singer" },
-      { name: "공연팀 섭외", path: "/booking/performance" },
-      { name: "특강강사", path: "/booking/lecturer" },
-      { name: "행사용품 대여", path: "/booking/equipment" },
+      { name: "행사 운영 지원", path: "/booking/operation" },
+      { name: "MC / 레크 강사", path: "/booking/mc" },
+      { name: "개그맨 / 가수 섭외", path: "/booking/casting" },
+      { name: "공연팀 소개", path: "/booking/performance" },
+      { name: "특강 강사", path: "/booking/lecturer" },
+      { name: "행사 용품 렌탈", path: "/booking/equipment" },
     ],
   },
   {
@@ -196,7 +194,7 @@ function Header() {
   };
 
   return (
-    <header className={`header ${isScrolled ? "scrolled" : ""}`}>
+    <header className={`header ${isScrolled ? "scrolled" : ""} ${location.pathname === '/' ? "home-header" : ""}`}>
       <div className="header-container">
         <Link to="/" className="logo">
           <img 
@@ -405,9 +403,9 @@ function Header() {
               </nav>
 
               <div className="mobile-menu-footer">
-                <a href="tel:010-3433-1282" className="mobile-phone-btn">
+                <a href="tel:010-5728-8848" className="mobile-phone-btn">
                   <Phone size={20} />
-                  <span>010-3433-1282</span>
+                  <span>010-5728-8848</span>
                 </a>
                 <Link to="/contact" className="mobile-contact-btn">
                   무료 상담 신청

@@ -18,50 +18,50 @@ const stats = [
 
 const services = [
   {
-    icon: HeartHandshake,
-    title: '가족행사',
-    desc: '결혼식, 팔순·구순·백세잔치 등 가족의 소중한 순간을 감동으로',
-    path: '/services/family',
+    icon: Award,
+    title: '공식 의전·기념식 행사',
+    desc: '기념식, 개소식, 준공식, 선포식, 개통식 등 격과 안정이 요구되는 공식행사',
+    path: '/services/ceremony',
     color: '#fb7185',
     gradient: 'linear-gradient(135deg, #fb7185 0%, #f43f5e 100%)'
   },
   {
-    icon: GraduationCap,
-    title: '학교행사',
-    desc: '대학교 MT, 대학축제 등 젊음과 열정이 넘치는 행사 기획',
-    path: '/services/school',
-    color: '#a855f7',
-    gradient: 'linear-gradient(135deg, #a855f7 0%, #9333ea 100%)'
-  },
-  {
     icon: Building2,
-    title: '기업행사',
-    desc: '워크숍, 체육대회, 송년회 등 기업의 중요한 순간을 완벽하게',
+    title: '기업행사·조직 커뮤니케이션',
+    desc: '창립기념식·워크숍·송년/신년회 등 조직의 메시지를 전달하는 기업 맞춤 행사',
     path: '/services/corporate',
     color: '#f97316',
     gradient: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)'
   },
   {
-    icon: Landmark,
-    title: '문화/공공행사',
-    desc: '지역 문화축제, 도시재생 문화사업, 대규모 전시회 및 캠프',
-    path: '/services/public',
+    icon: Users,
+    title: '팀빌딩 프로그램',
+    desc: '사람과 팀을 변화시키는 시그니처 프로그램 (팀빌딩, 레크레이션, 팀크레이션)',
+    path: '/services/teambuilding',
+    color: '#a855f7',
+    gradient: 'linear-gradient(135deg, #a855f7 0%, #9333ea 100%)'
+  },
+  {
+    icon: Trophy,
+    title: '체육대회·명랑운동회',
+    desc: '소규모부터 대규모까지 참여·몰입·분위기를 완성하는 스포츠형 행사',
+    path: '/services/sports',
     color: '#22d3ee',
     gradient: 'linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%)'
   },
   {
-    icon: Video,
-    title: '영상광고 제작',
-    desc: '기업·기관 홍보영상, 행사 기록 및 광고 제작',
-    path: '/services/video',
+    icon: GraduationCap,
+    title: '학교·청소년 단체캠프 행사',
+    desc: '수학여행·MT·대동제·학교 축제 등 교육·안전·몰입을 고려한 학교 맞춤 행사',
+    path: '/services/school',
     color: '#fbbf24',
     gradient: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)'
   },
   {
-    icon: Mic2,
-    title: 'MC/강사 섭외',
-    desc: 'MC, 강사 진행부터 기획·연출까지 아우르는 종합 서비스',
-    path: '/booking',
+    icon: PartyPopper,
+    title: '축제·전시·컨벤션 행사',
+    desc: '마을축제·지역축제·전시·컨벤션 등 기획부터 운영까지 책임지는 종합 토탈 이벤트',
+    path: '/services/exhibition',
     color: '#34d399',
     gradient: 'linear-gradient(135deg, #34d399 0%, #10b981 100%)'
   },
@@ -71,31 +71,31 @@ const portfolioItems = [
   {
     title: '삼성전자 체육대회',
     category: '기업행사',
-    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104124578_12.jpg',
+    image: '/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104124578_12.jpg',
     size: 'large'
   },
   {
     title: '현대자동차 팀빌딩',
     category: '팀빌딩',
-    image: '/happylight/해피라이트/레크레이션/1555984699091.jpg',
+    image: '/해피라이트/레크레이션/1555984699091.jpg',
     size: 'medium'
   },
   {
     title: 'LG전자 창립기념일',
     category: '기업행사',
-    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_14.jpg',
+    image: '/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_14.jpg',
     size: 'medium'
   },
   {
     title: '서울초 가을운동회',
     category: '학교행사',
-    image: '/happylight/해피라이트/레크레이션/1478390046277.jpg',
+    image: '/해피라이트/레크레이션/1478390046277.jpg',
     size: 'small'
   },
   {
     title: '네이버 골든벨',
     category: '골든벨',
-    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_28.jpg',
+    image: '/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_28.jpg',
     size: 'small'
   },
 ]
@@ -139,7 +139,7 @@ function Home() {
       <section className="hero" ref={heroRef}>
         <div className="hero-bg">
           <img 
-            src={`${import.meta.env.BASE_URL}images/hero-bg-generated.png`}
+            src={`${import.meta.env.BASE_URL}images/hero-bg-v2.png`}
             alt="Hero Background" 
             className="hero-bg-image"
           />

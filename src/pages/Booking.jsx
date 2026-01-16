@@ -8,36 +8,36 @@ import './Booking.css'
 
 const bookingCategories = [
   {
-    id: 'comedian',
-    icon: Laugh,
-    title: '개그맨 섭외',
-    desc: '행사의 분위기를 살리는 인기 개그맨들을 섭외해 드립니다',
-    count: '50+',
-    color: '#ff6b35',
-    image: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&h=400&fit=crop'
+    id: 'operation',
+    icon: Package,
+    title: '행사 운영 지원',
+    desc: '기획부터 현장 운영까지, 성공적인 행사를 위한 토탈 솔루션',
+    count: 'Total',
+    color: '#00d4ff',
+    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop'
   },
   {
     id: 'mc',
     icon: Mic,
-    title: 'MC/레크강사',
+    title: 'MC / 레크 강사',
     desc: '전문 MC와 레크레이션 강사로 행사를 완벽하게 진행합니다',
     count: '100+',
     color: '#7c3aed',
     image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop'
   },
   {
-    id: 'singer',
-    icon: Music,
-    title: '가수 섭외',
-    desc: '트로트, 발라드, K-POP 등 다양한 장르의 가수를 섭외합니다',
-    count: '200+',
+    id: 'casting',
+    icon: Laugh,
+    title: '개그맨 / 가수 섭외',
+    desc: '행사의 분위기를 살리는 인기 개그맨과 가수를 섭외해 드립니다',
+    count: '250+',
     color: '#f72585',
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop'
+    image: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&h=400&fit=crop'
   },
   {
     id: 'performance',
     icon: Users,
-    title: '공연팀 섭외',
+    title: '공연팀 소개',
     desc: '댄스, 마술, 비보이 등 다양한 공연팀을 섭외합니다',
     count: '80+',
     color: '#06d6a0',
@@ -46,16 +46,16 @@ const bookingCategories = [
   {
     id: 'lecturer',
     icon: GraduationCap,
-    title: '특강강사',
+    title: '특강 강사',
     desc: '동기부여, 리더십, 소통 등 분야별 전문 강사를 연결합니다',
     count: '150+',
-    color: '#00d4ff',
-    image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop'
+    color: '#ff6b35',
+    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop'
   },
   {
     id: 'equipment',
     icon: Package,
-    title: '행사용품 대여',
+    title: '행사 용품 렌탈',
     desc: '에어바운스, 게임도구, 음향장비 등 모든 행사용품 대여',
     count: '300+',
     color: '#ffd700',
@@ -78,7 +78,7 @@ function Booking() {
           >
             <span className="page-badge">BOOKING</span>
             <h1 className="page-title">
-              섭외 및 <span className="gradient-text">대여</span>
+              프로덕션 <span className="gradient-text">지원</span>
             </h1>
             <p className="page-desc">
               행사에 필요한 모든 것을 원스톱으로 해결해 드립니다
@@ -140,7 +140,7 @@ function Booking() {
           >
             <span className="section-badge">WHY US</span>
             <h2 className="section-title">
-              해피라이트 <span className="gradient-text">섭외 서비스</span>
+              해피라이트 <span className="gradient-text">프로덕션 지원</span>
             </h2>
           </motion.div>
 
@@ -200,7 +200,7 @@ function Booking() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2>원하시는 섭외/대여 항목이 있으신가요?</h2>
+            <h2>원하시는 프로덕션 지원 항목이 있으신가요?</h2>
             <p>전문 컨설턴트가 맞춤 상담을 도와드립니다</p>
             <div className="cta-buttons">
               <a href="tel:010-1234-5678" className="btn btn-primary">

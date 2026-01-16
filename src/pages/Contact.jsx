@@ -1,12 +1,20 @@
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useEffect, useRef } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { 
   Phone, Mail, MapPin, Clock, Send, MessageCircle,
-  Instagram, Youtube, CheckCircle, Sparkles
+  Instagram, Youtube, CheckCircle, Sparkles, ArrowDown
 } from 'lucide-react'
 import './Contact.css'
 
+
+
 function Contact() {
+  const contactInfoRef = useRef(null)
+
+  const scrollToContactInfo = () => {
+    contactInfoRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -40,7 +48,7 @@ function Contact() {
     '골든벨',
     '공식의전행사',
     '레크레이션',
-    '섭외 문의',
+    '프로덕션지원 문의',
     '기타'
   ]
 
@@ -66,22 +74,46 @@ function Contact() {
               CONTACT US
             </span>
             <h1 className="page-title">
-              무료 상담<span className="gradient-text">신청</span>
+              1분만에<br />
+              <span className="gradient-text">전문 상담 받기</span>
             </h1>
-            <p className="page-desc">
-              특별한 행사를 계획 중이신가요?<br />
-              전문 컨설턴트가 맞춤 상담을 도와드립니다
-            </p>
+            
+            <motion.div 
+              className="hero-cta-wrapper"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <button 
+                onClick={scrollToContactInfo}
+                className="btn btn-primary consulting-btn"
+              >
+                컨설팅
+                <ArrowDown size={18} />
+              </button>
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
+      {/* Message Marquee Section */}
+      <section className="section message-marquee-section">
+        <div className="marquee-track">
+          <div className="marquee-item">
+            <span className="marquee-text">당신의 생각이 그날의 <span className="highlight">최고의 퍼포먼스</span>가 되도록 함께 준비하겠습니다.</span>
+          </div>
+          <div className="marquee-item">
+            <span className="marquee-text">당신의 생각이 그날의 <span className="highlight">최고의 퍼포먼스</span>가 되도록 함께 준비하겠습니다.</span>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Info Cards */}
-      <section className="section contact-info-section">
+      <section className="section contact-info-section" ref={contactInfoRef}>
         <div className="container">
           <div className="contact-info-grid">
             <motion.a
-              href="tel:010-3433-1282"
+              href="tel:010-5728-8848"
               className="contact-info-card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -93,13 +125,13 @@ function Contact() {
               </div>
               <div className="contact-info-content">
                 <h3>전화 문의</h3>
-                <p className="contact-info-main">010-3433-1282</p>
+                <p className="contact-info-main">010-5728-8848</p>
                 <span className="contact-info-sub">친절하게 상담해드립니다</span>
               </div>
             </motion.a>
 
             <motion.a
-              href="mailto:info@happylight.kr"
+              href="mailto:aura8848@gmail.com"
               className="contact-info-card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -111,7 +143,7 @@ function Contact() {
               </div>
               <div className="contact-info-content">
                 <h3>이메일 문의</h3>
-                <p className="contact-info-main">info@happylight.kr</p>
+                <p className="contact-info-main">aura8848@gmail.com</p>
                 <span className="contact-info-sub">24시간 내 답변드립니다</span>
               </div>
             </motion.a>
@@ -128,8 +160,8 @@ function Contact() {
               </div>
               <div className="contact-info-content">
                 <h3>오시는 길</h3>
-                <p className="contact-info-main">광주광역시 서구 상무연하로 72, 502호</p>
-                <span className="contact-info-sub">상무지구 내 위치</span>
+                <p className="contact-info-main">광주 서구 운천로 247 스타타워 4층</p>
+                <span className="contact-info-sub">관광기업지원센터</span>
               </div>
             </motion.div>
 
@@ -145,8 +177,8 @@ function Contact() {
               </div>
               <div className="contact-info-content">
                 <h3>상담 시간</h3>
-                <p className="contact-info-main">평일 09:00 - 18:00</p>
-                <span className="contact-info-sub">주말/공휴일 휴무</span>
+                <p className="contact-info-main">연중무휴 · 24시간 대응</p>
+                <span className="contact-info-sub">언제든 문의 가능합니다</span>
               </div>
             </motion.div>
           </div>
@@ -262,7 +294,7 @@ function Contact() {
                     </div>
                   </div>
 
-                  <div className="form-group">
+                    <div className="form-group">
                     <label htmlFor="message">문의 내용 *</label>
                     <textarea
                       id="message"
@@ -273,6 +305,9 @@ function Contact() {
                       rows={5}
                       required
                     ></textarea>
+                    <p className="form-note" style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', marginTop: '0.5rem' }}>
+                      소규모행사도 가능합니다. 부담없이 남겨주세요.
+                    </p>
                   </div>
 
                   <div className="form-privacy">
@@ -302,19 +337,20 @@ function Contact() {
               <div className="map-wrapper">
                 <div className="map-placeholder">
                   <MapPin size={48} />
-                  <p>광주광역시 서구 상무연하로 72, 502호</p>
-                  <span>상무지구 내 위치</span>
+                  <p>광주 서구 운천로 247 스타타워 4층<br />(치평동, 스타타워) 관광기업지원센터</p>
+                  <span>해피라이트엔터테인먼트</span>
                 </div>
               </div>
 
               <div className="quick-contact">
                 <h3>빠른 상담</h3>
                 <p>전화 상담을 원하시면 지금 바로 연락주세요!</p>
-                <a href="tel:010-3433-1282" className="quick-phone">
+                <a href="tel:010-5728-8848" className="quick-phone">
                   <Phone size={24} />
-                  <span>010-3433-1282</span>
+                  <span>010-5728-8848</span>
                 </a>
               </div>
+
 
               <div className="social-links">
                 <h3>SNS 채널</h3>
@@ -327,7 +363,7 @@ function Contact() {
                     <Youtube size={20} />
                     <span>Youtube</span>
                   </a>
-                  <a href="#" className="social-btn kakao">
+                  <a href="https://open.kakao.com/o/svQrVCw" className="social-btn kakao" target="_blank" rel="noopener noreferrer">
                     <MessageCircle size={20} />
                     <span>KakaoTalk</span>
                   </a>

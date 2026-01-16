@@ -108,7 +108,7 @@ function App() {
           <Route path="/portfolio/videos" element={<PortfolioVideos />} />
           <Route path="/portfolio/photos" element={<PortfolioPhotos />} />
           
-          {/* ========== 섭외 및 대여 ========== */}
+          {/* ========== 프로덕션지원 ========== */}
           <Route path="/booking" element={<Booking />} />
           {/* :categoryId는 동적 파라미터 - 예: /booking/comedian, /booking/mc 등 */}
           <Route path="/booking/:categoryId" element={<BookingCategory />} />

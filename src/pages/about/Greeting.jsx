@@ -24,6 +24,15 @@ const values = [
 function Greeting() {
   return (
     <div className="greeting-page">
+      {/* Background Effects */}
+      <div className="greeting-bg-effects">
+        <div className="bg-gradient-1"></div>
+        <div className="bg-gradient-2"></div>
+        <div className="bg-particle p1"></div>
+        <div className="bg-particle p2"></div>
+        <div className="bg-particle p3"></div>
+      </div>
+
       {/* Hero */}
       <section className="page-hero">
         <div className="page-hero-bg"></div>
@@ -35,8 +44,8 @@ function Greeting() {
             transition={{ duration: 0.6 }}
           >
             <span className="page-badge">GREETING</span>
-            <h1 className="page-title">
-              인사<span className="gradient-text">말</span>
+            <h1 className="page-title" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}>
+              해피라이트 대표 <span className="gradient-text">인사말</span>
             </h1>
             <p className="page-desc">
               해피라이트 엔터테인먼트의 철학과 비전을 소개합니다
@@ -70,29 +79,59 @@ function Greeting() {
               <Quote className="quote-icon" size={48} />
               
               <h2 className="greeting-title">
-                특별한 순간을<br />
-                <span className="gradient-text">함께 만들어갑니다</span>
+                행사는 순간이지만,<br />
+                <span className="gradient-text">그 순간의 완성도는 평생 기억됩니다.</span>
               </h2>
               
               <div className="greeting-text">
                 <p>
-                  안녕하세요, 해피라이트 엔터테인먼트 대표 김영성입니다.
+                  안녕하십니까.<br />
+                  해피라이트 엔터테인먼트 대표 김영성입니다.
                 </p>
                 <p>
-                  저희 해피라이트 엔터테인먼트는 다양한 현장에서 축적된 경험과 전문성을 바탕으로,
-                  MC, 강사 진행, 기획·연출까지 아우르는 종합 행사대행 기획사입니다.
+                  저는 지난 20년 동안<br />
+                  수많은 무대와 현장에서<br />
+                  단 한 가지 원칙만을 지켜왔습니다.
+                </p>
+                <p className="highlight-text">
+                  ‘행사는 잘 치러지는 것이 아니라,<br />
+                  의도한 결과에 정확히 도달해야 한다는 것.’
                 </p>
                 <p>
-                  가족의 소중한 순간부터 기업·학교·지역축제, 도시재생 문화사업,
-                  대규모 캠프와 전시회까지 - 어떤 자리든 따뜻하고 즐겁게 채워드립니다.
+                  해피라이트는 단순히 사람을 배치하고<br />
+                  프로그램을 나열하는 회사가 아닙니다.
                 </p>
                 <p>
-                  B2C(개인), B2B(기업), B2G(공공기관) 전 영역에서 맞춤형 서비스를 제공하며,
-                  참석자 모두가 만족할 수 있는 행사 기획을 실현합니다.
+                  목적을 읽고,<br />
+                  흐름을 설계하며,<br />
+                  현장에서 발생하는 모든 변수를 통제하는<br />
+                  실전 중심의 이벤트 기획사입니다.
                 </p>
                 <p>
-                  "현장에 강한 기획력, 따뜻한 감동이 있는 연출"<br />
-                  해피라이트 엔터테인먼트가 함께합니다.
+                  우리는<br />
+                  MC·기획·연출·운영을 분리하지 않습니다.<br />
+                  처음 기획부터 마지막 박수까지,<br />
+                  모든 책임을 한 팀이 집니다.
+                </p>
+                <p>
+                  기업행사, 팀빌딩, 대규모 체육대회,<br />
+                  학교·지역축제, 공공기관 행사까지<br />
+                  규모와 형식이 달라도<br />
+                  완성도의 기준은 단 하나입니다.
+                </p>
+                <p className="highlight-text">
+                  “끝났을 때,<br />
+                  잘했다는 말이 자연스럽게 나오는가.”
+                </p>
+                <p>
+                  B2C, B2B, B2G 전 영역에서<br />
+                  20년간 2,500회 이상의 현장을 통해<br />
+                  검증된 방식으로만 제안합니다.
+                </p>
+                <p>
+                  “현장에 강한 기획력, 따뜻한 감동이 있는 연출”<br />
+                  그 기준을<br />
+                  해피라이트가 함께 만듭니다.
                 </p>
               </div>
               

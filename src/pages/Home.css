@@ -93,9 +93,9 @@
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 10vw, 6rem);
+  font-size: clamp(2.75rem, 9.5vw, 5.75rem);
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1.15;
   letter-spacing: -0.04em;
   margin-bottom: 1.5rem;
   color: white; /* Force white text for dark background */
@@ -126,6 +126,17 @@
 
 .hero-btn-secondary {
   padding: 1.125rem 2rem;
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--color-accent-secondary);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.hero-btn-secondary:hover {
+  background: rgba(14, 165, 233, 0.2);
+  border-color: var(--color-accent-secondary);
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.25);
+  transform: translateY(-2px);
 }
 
 .hero-stats {
@@ -161,7 +172,7 @@
 
 .hero-stat-label {
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.7); /* Force for dark bg */
 }
 
 /* Scroll Indicator */
@@ -174,7 +185,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.6); /* Force for dark bg */
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -198,8 +209,12 @@
 }
 
 /* About Section */
+/* About Section */
 .about-section {
   background: var(--color-bg-secondary);
+  background-image: url('/images/subtle-pattern-v2.png');
+  background-size: 400px;
+  background-blend-mode: soft-light;
   padding: 9rem 0;
 }
 
@@ -292,6 +307,10 @@
 /* Services Section */
 .services-section {
   background: var(--color-bg-primary);
+  background-image: url('/images/service-wave-v2.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
   padding: 11rem 0;
 }
 

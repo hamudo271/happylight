@@ -15,7 +15,7 @@
 }
 
 .booking-card:hover {
-  border-color: rgba(249, 115, 22, 0.25);
+  border-color: rgba(236, 72, 153, 0.25);
   transform: translateY(-8px);
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
 }
@@ -81,7 +81,7 @@
 
 .booking-card-count {
   padding: 0.4rem 0.875rem;
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(249, 115, 22, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(236, 72, 153, 0.08) 100%);
   border-radius: var(--radius-full);
   font-size: 0.8rem;
   color: var(--color-accent-primary);
@@ -130,7 +130,7 @@
 }
 
 .feature-item:hover {
-  border-color: rgba(249, 115, 22, 0.2);
+  border-color: rgba(236, 72, 153, 0.2);
   transform: translateY(-6px);
 }
 
@@ -141,8 +141,8 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(168, 85, 247, 0.1) 100%);
-  border: 1px solid rgba(249, 115, 22, 0.25);
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(14, 165, 233, 0.1) 100%);
+  border: 1px solid rgba(236, 72, 153, 0.25);
   border-radius: var(--radius-xl);
   color: var(--color-accent-primary);
 }

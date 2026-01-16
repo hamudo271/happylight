@@ -52,6 +52,11 @@
   filter: none;
 }
 
+/* 홈 헤더(스크롤 전)는 라이트모드에서도 흰색 로고 강제 */
+[data-theme="light"] .home-header:not(.scrolled) .logo-image {
+  filter: brightness(0) invert(1);
+}
+
 /* Desktop Navigation */
 .desktop-nav {
   display: flex;
@@ -87,6 +92,16 @@
 
 .nav-link.active {
   color: var(--color-accent-primary);
+}
+
+/* 홈 헤더(스크롤 전)는 라이트모드에서도 흰색 텍스트 강제 */
+[data-theme="light"] .home-header:not(.scrolled) .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+[data-theme="light"] .home-header:not(.scrolled) .nav-link:hover,
+[data-theme="light"] .home-header:not(.scrolled) .nav-link.active {
+  color: white !important;
 }
 
 .nav-item:hover .nav-chevron {
@@ -126,7 +141,7 @@
 
 [data-theme="light"] .submenu-link:hover {
   color: #1e293b;
-  background: rgba(249, 115, 22, 0.08);
+  background: rgba(236, 72, 153, 0.08);
 }
 
 .submenu-link {
@@ -148,7 +163,7 @@
 
 .submenu-link:hover {
   color: var(--color-text-primary);
-  background: rgba(249, 115, 22, 0.1);
+  background: rgba(236, 72, 153, 0.1);
 }
 
 .submenu-link:hover .submenu-arrow {
@@ -181,7 +196,7 @@
 
 .contact-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 40px rgba(249, 115, 22, 0.5);
+  box-shadow: 0 0 40px rgba(236, 72, 153, 0.5);
 }
 
 .theme-toggle {
