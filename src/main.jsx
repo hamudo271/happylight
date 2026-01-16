@@ -19,7 +19,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 // 페이지 이동을 위한 라우터 (HashRouter 방식 - GitHub Pages 호환성용)
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 
 // 메인 앱 컴포넌트
 import App from './App'
@@ -36,15 +36,15 @@ import { ThemeProvider } from './context/ThemeContext'
  * 구조 설명 (바깥쪽 → 안쪽):
  * - React.StrictMode: 개발 모드에서 잠재적 문제를 감지
  * - ThemeProvider: 다크/라이트 테마 상태를 앱 전체에 제공
- * - BrowserRouter: HTML5 History API 기반 페이지 이동 기능 제공 (깔끔한 URL)
+ * - HashRouter: GitHub Pages 호환성을 위해 Hash 기반 라우팅 사용 (#/path)
  * - App: 실제 앱 컴포넌트
  */
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider>
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   </React.StrictMode>,
 )
