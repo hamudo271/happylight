@@ -11,7 +11,7 @@ const categories = [
     path: '/portfolio/videos',
     count: '50+',
     color: '#ff6b35',
-    image: '/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104124578_29.jpg'
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104124578_29.jpg'
   },
   {
     icon: Camera,
@@ -20,7 +20,7 @@ const categories = [
     path: '/portfolio/photos',
     count: '500+',
     color: '#7c3aed',
-    image: '/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_17.jpg'
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_17.jpg'
   },
 ]
 
@@ -29,37 +29,37 @@ const recentWorks = [
     title: '삼성전자 2024 체육대회',
     category: '기업행사',
     date: '2024.10',
-    image: '/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104124578_12.jpg'
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104124578_12.jpg'
   },
   {
     title: '현대자동차 팀빌딩 프로그램',
     category: '팀빌딩',
     date: '2024.09',
-    image: '/해피라이트/레크레이션/1555984699091.jpg'
+    image: '/happylight/해피라이트/레크레이션/1555984699091.jpg'
   },
   {
     title: 'LG전자 창립 75주년 행사',
     category: '공식의전',
     date: '2024.08',
-    image: '/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_14.jpg'
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_14.jpg'
   },
   {
     title: '서울초등학교 가을운동회',
     category: '학교행사',
     date: '2024.10',
-    image: '/해피라이트/레크레이션/1478390046277.jpg'
+    image: '/happylight/해피라이트/레크레이션/1478390046277.jpg'
   },
   {
     title: 'SK텔레콤 송년회',
     category: '기업행사',
     date: '2024.11',
-    image: '/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104124578_06.jpg'
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104124578_06.jpg'
   },
   {
     title: '네이버 도전! 골든벨',
     category: '골든벨',
     date: '2024.07',
-    image: '/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_28.jpg'
+    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_28.jpg'
   },
 ]
 
