@@ -212,7 +212,7 @@
 /* About Section */
 .about-section {
   background: var(--color-bg-secondary);
-  background-image: url('/images/subtle-pattern-v2.png');
+  background-image: url('/happylight/images/subtle-pattern-v2.png');
   background-size: 400px;
   background-blend-mode: soft-light;
   padding: 9rem 0;
@@ -307,7 +307,7 @@
 /* Services Section */
 .services-section {
   background: var(--color-bg-primary);
-  background-image: url('/images/service-wave-v2.png');
+  background-image: url('/happylight/images/service-wave-v2.png');
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
