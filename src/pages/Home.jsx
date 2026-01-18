@@ -71,31 +71,25 @@ const portfolioItems = [
   {
     title: '삼성전자 체육대회',
     category: '기업행사',
-    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104124578_12.jpg',
+    image: import.meta.env.BASE_URL + '해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104124578_12.jpg',
     size: 'large'
   },
   {
     title: '현대자동차 팀빌딩',
     category: '팀빌딩',
-    image: '/happylight/해피라이트/레크레이션/1555984699091.jpg',
-    size: 'medium'
-  },
-  {
-    title: 'LG전자 창립기념일',
-    category: '기업행사',
-    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_14.jpg',
+    image: import.meta.env.BASE_URL + '해피라이트/레크레이션/1555984699091.jpg',
     size: 'medium'
   },
   {
     title: '서울초 가을운동회',
     category: '학교행사',
-    image: '/happylight/해피라이트/레크레이션/1478390046277.jpg',
+    image: import.meta.env.BASE_URL + '해피라이트/레크레이션/1478390046277.jpg',
     size: 'small'
   },
   {
     title: '네이버 골든벨',
     category: '골든벨',
-    image: '/happylight/해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_28.jpg',
+    image: import.meta.env.BASE_URL + '해피라이트/KakaoTalk_20250905_153826410/KakaoTalk_20250902_104115575_28.jpg',
     size: 'small'
   },
 ]
@@ -223,7 +217,7 @@ function Home() {
       </section>
 
       {/* About Section - 회사 소개 */}
-      <section className="section about-section">
+      <section className="section about-section" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/subtle-pattern-v2.png)` }}>
         <div className="container">
           <motion.div
             className="about-content"
@@ -280,7 +274,7 @@ function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="section services-section">
+      <section className="section services-section" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/service-wave-v2.png)` }}>
         <div className="container">
           <motion.div
             className="section-header"

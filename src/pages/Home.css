@@ -212,7 +212,7 @@
 /* About Section */
 .about-section {
   background: var(--color-bg-secondary);
-  background-image: url('/happylight/images/subtle-pattern-v2.png');
+
   background-size: 400px;
   background-blend-mode: soft-light;
   padding: 9rem 0;
@@ -307,7 +307,7 @@
 /* Services Section */
 .services-section {
   background: var(--color-bg-primary);
-  background-image: url('/happylight/images/service-wave-v2.png');
+
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
@@ -482,6 +482,7 @@
   padding: 2rem;
   opacity: 0;
   transition: var(--transition-base);
+  color: white;
 }
 
 .portfolio-item:hover .portfolio-overlay {
@@ -497,12 +498,14 @@
   font-weight: 600;
   margin-bottom: 0.75rem;
   width: fit-content;
+  color: white;
 }
 
 .portfolio-title {
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 700;
+  color: white;
 }
 
 .portfolio-cta {
