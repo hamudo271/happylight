@@ -174,9 +174,7 @@ function Footer() {
             <p className="copyright">
               © {currentYear} 해피라이트. All rights reserved.
             </p>
-            <p className="made-with">
-              Made with <Heart size={12} className="heart-icon" /> in Korea
-            </p>
+
           </div>
           <div className="footer-bottom-right">
             <div className="footer-legal">
